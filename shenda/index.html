@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revita Biotec | 首页</title>
+    <title data-i18n="title">Revita Biotec | 首页</title>
     <meta
       name="description"
       content="Revita Biotec 专注抗衰老与皮肤修复科研，提供安全、高效的创新护肤解决方案。"
+      data-i18n="description"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,64 +17,84 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="index">
     <header class="site-header">
       <div class="container nav-bar">
         <a class="brand" href="index.html">Revita Biotec</a>
         <nav class="nav-links">
-          <a href="about.html">关于我们</a>
-          <a href="research.html">研发方向</a>
-          <a href="advantages.html">优势亮点</a>
-          <a href="contact.html">联系我们</a>
+          <div class="nav-item">
+            <span class="nav-link nav-link--trigger" data-i18n="nav.about">瑞维塔介绍</span>
+            <div class="dropdown-menu">
+              <a href="business-model.html" data-i18n="nav.about.businessModel">业务模式</a>
+              <a href="founder.html" data-i18n="nav.about.founder">创始人介绍</a>
+              <a href="patent.html" data-i18n="nav.about.patent">专利技术</a>
+              <a href="research-direction.html" data-i18n="nav.about.research">研发方向</a>
+            </div>
+          </div>
+          <a class="nav-link" href="research.html" data-i18n="nav.products">产品中心</a>
+          <a class="nav-link" href="latest.html" data-i18n="nav.news">最新动态</a>
+          <a class="nav-link" href="contact.html" data-i18n="nav.contact">联系我们</a>
+          <a class="nav-link" href="faq.html" data-i18n="nav.faq">常见问题</a>
         </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="zh">中文</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero home-hero">
+      <section class="home-hero">
+        <img src="images/封面.jpg" alt="Revita Biotec" class="hero-image">
+      </section>
+      
+      <section class="hero-content">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Science for Youthful Skin</p>
-            <h1>重启生命力，焕活每一份未来</h1>
-            <p class="lead">
-              Revita Biotec 将前沿生物科技融入抗衰和皮肤修复研究，打造安全、高效的健康方案。
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="about.html">了解公司</a>
-              <a class="btn btn-secondary" href="research.html">探索研发</a>
-              <a class="btn btn-secondary" href="contact.html">立即联系</a>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Science for Youthful Skin</p>
+            <h1 data-i18n="hero.title">重启生命力，焕活每一份未来</h1>
+            <div class="lead">
+              <p data-i18n="hero.lead1">
+                Revita Biotec 将前沿<span class="highlight">生物科技</span>融入抗衰和皮肤修复研究，以科学严谨的态度探索皮肤健康的本质。
+              </p>
+              <p data-i18n="hero.lead2">
+                我们专注于<span class="highlight">水凝胶敷料</span>、<span class="highlight">微针递药系统</span>等核心技术，打造安全、高效的创新护肤解决方案。
+              </p>
             </div>
-          </div>
-          <div class="hero-visual">
-            <img src="im 1.jpg" alt="皮肤修复科技实拍" />
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="about.html" data-i18n="hero.cta1">了解公司</a>
+              <a class="btn btn-secondary" href="research.html" data-i18n="hero.cta2">探索研发</a>
+              <a class="btn btn-secondary" href="contact.html" data-i18n="hero.cta3">立即联系</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="overview container">
+      <section class="overview">
         <div class="overview-intro">
-          <p class="section-tag">核心服务</p>
+          <h2 data-i18n="overview.title">核心服务与技术方向</h2>
+          <p data-i18n="overview.text">围绕皮肤健康与抗衰老领域，我们提供全方位的研发与转化服务。</p>
         </div>
-        <div class="overview-cards">
+        <div class="container overview-cards">
           <article class="card">
-            <h3>关于我们</h3>
-            <p>了解 Revita Biotec 的使命、团队与科学愿景。</p>
-            <a class="link-button" href="about.html">前往</a>
+            <h3 data-i18n="card.about.title">关于我们</h3>
+            <p data-i18n="card.about.text">了解 Revita Biotec 的使命、团队与科学愿景。</p>
+            <a class="link-button" href="about.html" data-i18n="card.link">前往</a>
           </article>
           <article class="card">
-            <h3>研发方向</h3>
-            <p>查看我们在抗衰与皮肤修复领域的研发战略与项目。</p>
-            <a class="link-button" href="research.html">前往</a>
+            <h3 data-i18n="card.research.title">研发方向</h3>
+            <p data-i18n="card.research.text">查看我们在抗衰与皮肤修复领域的研发战略与项目。</p>
+            <a class="link-button" href="research-direction.html" data-i18n="card.link">前往</a>
           </article>
           <article class="card">
-            <h3>优势亮点</h3>
-            <p>直观展示公司的核心优势与技术能力。</p>
-            <a class="link-button" href="advantages.html">前往</a>
+            <h3 data-i18n="card.patent.title">专利技术</h3>
+            <p data-i18n="card.patent.text">探索我们的水凝胶敷料与微针递药系统专利技术。</p>
+            <a class="link-button" href="patent.html" data-i18n="card.link">前往</a>
           </article>
           <article class="card">
-            <h3>联系我们</h3>
-            <p>通过邮箱或电话与我们取得联系，获取合作机会。</p>
-            <a class="link-button" href="contact.html">前往</a>
+            <h3 data-i18n="card.contact.title">联系我们</h3>
+            <p data-i18n="card.contact.text">通过邮箱或电话与我们取得联系，获取合作机会。</p>
+            <a class="link-button" href="contact.html" data-i18n="card.link">前往</a>
           </article>
         </div>
       </section>
@@ -81,8 +102,9 @@
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>© 2026 Revita Biotec。专注抗衰老与皮肤修复科研。</p>
+        <p data-i18n="footer.text">© 2026 Revita Biotec。专注抗衰老与皮肤修复科研。</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

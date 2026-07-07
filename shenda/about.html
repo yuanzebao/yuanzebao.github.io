@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revita Biotec | 关于我们</title>
+    <title data-i18n="title">Revita Biotec | 关于我们</title>
     <meta
       name="description"
       content="了解 Revita Biotec 的使命、团队和科学愿景。"
+      data-i18n="description"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,51 +17,87 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="about">
     <header class="site-header">
       <div class="container nav-bar">
         <a class="brand" href="index.html">Revita Biotec</a>
         <nav class="nav-links">
-          <a href="index.html">首页</a>
-          <a href="research.html">研发方向</a>
-          <a href="advantages.html">优势亮点</a>
-          <a href="contact.html">联系我们</a>
+          <div class="nav-item">
+            <span class="nav-link nav-link--trigger" data-i18n="nav.about">瑞维塔介绍</span>
+            <div class="dropdown-menu">
+              <a href="business-model.html" data-i18n="nav.about.businessModel">业务模式</a>
+              <a href="founder.html" data-i18n="nav.about.founder">创始人介绍</a>
+              <a href="patent.html" data-i18n="nav.about.patent">专利技术</a>
+              <a href="research-direction.html" data-i18n="nav.about.research">研发方向</a>
+            </div>
+          </div>
+          <a class="nav-link" href="research.html" data-i18n="nav.products">产品中心</a>
+          <a class="nav-link" href="latest.html" data-i18n="nav.news">最新动态</a>
+          <a class="nav-link" href="contact.html" data-i18n="nav.contact">联系我们</a>
+          <a class="nav-link" href="faq.html" data-i18n="nav.faq">常见问题</a>
         </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="zh">中文</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="page-banner">
-        <div class="container">
-          <p class="section-tag">关于我们</p>
-          <h1>科学驱动的皮肤健康创新</h1>
-          <p>在 Revita Biotec，我们汇聚生物学与皮肤科学领域的专业力量，专注于抗衰老与皮肤修复研究。</p>
+      <section class="home-hero">
+        <img src="images/封面.jpg" alt="Revita Biotec" class="hero-image">
+      </section>
+      
+      <section class="hero-content">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">About Revita</p>
+            <h1 data-i18n="hero.title">科学驱动的皮肤健康创新</h1>
+            <div class="lead">
+              <p data-i18n="hero.lead1"></p>
+              <p data-i18n="hero.lead2"></p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="page-content container">
-        <div class="content-grid">
-          <div class="content-block">
-            <h2>我们的使命</h2>
-            <p>通过系统性科研与严格实验，推动细胞抗衰、胶原再生和屏障修复方向的技术突破。</p>
-          </div>
-          <div class="content-block">
-            <h2>团队组成</h2>
-            <p>团队由细胞生物学家、皮肤科学专家和配方工程师组成，专注于将实验室成果转化为实用方案。</p>
-          </div>
-          <div class="content-block">
-            <h2>发展策略</h2>
-            <p>我们通过多学科协同与持续迭代，打造具有长期竞争力的创新产品线。</p>
+      <section class="content-section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-block">
+              <h2 data-i18n="content.section1.title">我们的使命</h2>
+              <p data-i18n="content.section1.text"></p>
+            </div>
+            <div class="content-block">
+              <h2 data-i18n="content.section2.title">团队组成</h2>
+              <p data-i18n="content.section2.text"></p>
+            </div>
           </div>
         </div>
-        <a class="return-home" href="index.html">返回首页</a>
+      </section>
+
+      <section class="content-section">
+        <div class="container">
+          <div class="content-grid">
+            <div class="content-block">
+              <h2 data-i18n="content.section3.title">专利技术</h2>
+              <p data-i18n="content.section3.text"></p>
+            </div>
+            <div class="content-block">
+              <h2 data-i18n="content.section4.title">研发方向</h2>
+              <p data-i18n="content.section4.text"></p>
+            </div>
+          </div>
+          <a class="return-home" href="index.html" data-i18n="return.home">返回首页</a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-content">
-        <p>© 2026 Revita Biotec。专注抗衰老与皮肤修复科研。</p>
+        <p data-i18n="footer.text">© 2026 Revita Biotec。专注抗衰老与皮肤修复科研。</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
