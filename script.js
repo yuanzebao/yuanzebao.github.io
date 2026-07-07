@@ -35,7 +35,10 @@ const translations = {
     'card.contact.title': { zh: '联系我们', en: 'Contact Us' },
     'card.contact.text': { zh: '获取合作咨询，了解更多合作机会。', en: 'Get consultation and explore cooperation opportunities.' },
     'card.link': { zh: '前往', en: 'Go' },
-    'footer.text': { zh: '© 2026 Revita Biotec。专注抗衰老与皮肤修复科研。', en: '© 2026 Revita Biotec. Focused on anti-aging and skin repair research.' }
+    'footer.text': { zh: '© 2026 Revita Biotec。专注抗衰老与皮肤修复科研。', en: '© 2026 Revita Biotec. Focused on anti-aging and skin repair research.' },
+    'cookie.message': { zh: '本站采用 Cookie 及同类数据采集技术，用于统计网站访问数据、优化页面浏览体验、保障网站基础功能正常运行。访问本网站即视为您认可我们依据隐私政策收集必要访问信息。您可通过浏览器设置自主管理或关闭 Cookie，关闭后部分页面交互、图片加载功能可能受限。', en: 'This website uses cookies and similar data collection technologies to analyze website traffic, optimize browsing experience, and ensure basic website functionality. By visiting this website, you acknowledge our privacy policy for collecting necessary access information. You can manage or disable cookies through your browser settings; however, some page interactions and image loading may be limited after disabling.' },
+    'cookie.accept': { zh: '接受', en: 'Accept' },
+    'cookie.reject': { zh: '拒绝', en: 'Reject' }
   },
   about: {
     title: { zh: 'Revita Biotec | 关于我们', en: 'Revita Biotec | About Us' },
@@ -380,11 +383,85 @@ function translatePage() {
   }
 }
 
+function initLanguageSelection() {
+  const languageOverlay = document.getElementById('languageOverlay');
+  const langZhBtn = document.querySelector('.lang-zh');
+  const langEnBtn = document.querySelector('.lang-en');
+  const hasLanguage = localStorage.getItem('lang');
+
+  if (hasLanguage && languageOverlay) {
+    languageOverlay.classList.add('hidden');
+  }
+
+  if (langZhBtn) {
+    langZhBtn.addEventListener('click', () => {
+      localStorage.setItem('lang', 'zh');
+      if (languageOverlay) {
+        languageOverlay.classList.add('hidden');
+      }
+      translatePage();
+      initCookieConsent(true);
+    });
+  }
+
+  if (langEnBtn) {
+    langEnBtn.addEventListener('click', () => {
+      localStorage.setItem('lang', 'en');
+      if (languageOverlay) {
+        languageOverlay.classList.add('hidden');
+      }
+      translatePage();
+      initCookieConsent(true);
+    });
+  }
+}
+
+function initCookieConsent(immediate = false) {
+  const cookieConsent = document.getElementById('cookieConsent');
+  const acceptBtn = document.querySelector('.cookie-accept');
+  const rejectBtn = document.querySelector('.cookie-reject');
+  const hasConsent = localStorage.getItem('cookieConsent');
+
+  if (!hasConsent && cookieConsent) {
+    if (immediate) {
+      cookieConsent.classList.add('show');
+    } else {
+      setTimeout(() => {
+        cookieConsent.classList.add('show');
+      }, 1000);
+    }
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      if (cookieConsent) {
+        cookieConsent.classList.remove('show');
+      }
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'rejected');
+      if (cookieConsent) {
+        cookieConsent.classList.remove('show');
+      }
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const currentLang = getCurrentLang();
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
     btn.addEventListener('click', () => setLang(btn.dataset.lang));
   });
-  translatePage();
+  
+  if (localStorage.getItem('lang')) {
+    translatePage();
+    initCookieConsent();
+  }
+  
+  initLanguageSelection();
 });
