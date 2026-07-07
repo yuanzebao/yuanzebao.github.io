@@ -75,8 +75,8 @@ img {
 
 .nav-item {
   position: relative;
-  padding-bottom: 0.7rem;
-  margin-bottom: -0.7rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .nav-link {
@@ -95,7 +95,7 @@ img {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.1rem);
+  top: 100%;
   left: 0;
   min-width: 190px;
   padding: 0.6rem;
@@ -107,6 +107,16 @@ img {
   border-radius: 16px;
   box-shadow: 0 16px 40px rgba(34, 69, 54, 0.12);
   z-index: 20;
+  margin-top: 0;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 12px;
 }
 
 .dropdown-menu a {
@@ -123,8 +133,7 @@ img {
 }
 
 .nav-item:hover .dropdown-menu,
-.nav-item:focus-within .dropdown-menu,
-.dropdown-menu:hover {
+.nav-item:focus-within .dropdown-menu {
   display: flex;
 }
 
