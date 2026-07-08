@@ -926,7 +926,60 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.image-carousel-section {
+  background: white;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 280px;
+  margin-right: 1.5rem;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 720px) {
+  .carousel-item {
+    width: 200px;
+    margin-right: 1rem;
+  }
+  
+  .carousel-item img {
+    height: 115px;
+  }
+
   .nav-links {
     display: none;
   }
