@@ -3,12 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="title">Revita Biotec | 专利技术</title>
-    <meta name="description" content="了解我们在生物材料领域的核心专利技术。" data-i18n="description" />
+    <title data-i18n="title">Revita Biotec | 核心优势</title>
+    <meta name="description" content="了解我们在生物材料领域的核心优势。" data-i18n="description" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .page-content {
+        background: #f7fef9;
+        padding: 4rem 0;
+      }
+      
+      .patent-grid {
+        max-width: 1000px;
+        margin: 0 auto 4rem;
+        padding: 0 2rem;
+      }
+      
+      .patent-card {
+        background: #ffffff;
+        border-radius: 0;
+        padding: 2.5rem;
+        box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
+        margin-bottom: 2rem;
+      }
+      
+      .patent-card:last-child {
+        margin-bottom: 0;
+      }
+      
+      .patent-card h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #1a5c3d;
+        margin: 0 0 1rem;
+      }
+      
+      .patent-info {
+        font-size: 0.95rem;
+        color: #555555;
+        margin: 0 0 0.5rem;
+        font-style: italic;
+      }
+      
+      .patent-meta {
+        font-size: 0.8rem;
+        color: #555555;
+        margin: 0 0 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(26, 92, 61, 0.1);
+      }
+      
+      .patent-card p:last-child {
+        font-size: 0.95rem;
+        color: #222222;
+        line-height: 1.7;
+        margin: 0;
+      }
+      
+      /* 核心优势板块 */
+      .advantages-section {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      
+      .advantages-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      
+      .advantages-header .section-tag {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.85rem;
+        color: #1a5c3d;
+        font-weight: 700;
+        margin: 0 0 1rem;
+      }
+      
+      .advantages-header h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #1a5c3d;
+        margin: 0;
+      }
+      
+      .advantages-table-card {
+        background: #ffffff;
+        border-radius: 0;
+        box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
+        overflow: hidden;
+      }
+      
+      .advantages-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      .advantages-table th {
+        background: #1a5c3d;
+        color: #ffffff;
+        padding: 1rem 1.25rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      
+      .advantages-table td {
+        padding: 1.25rem 1.25rem;
+        font-size: 0.95rem;
+        color: #222222;
+        border-bottom: 1px solid rgba(26, 92, 61, 0.08);
+      }
+      
+      .advantages-table tbody tr:nth-child(even) {
+        background: #f2fbf4;
+      }
+      
+      .advantages-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+      
+      .advantages-table td:first-child {
+        font-weight: 600;
+        color: #1a5c3d;
+        width: 25%;
+      }
+    </style>
   </head>
   <body data-page="patent">
     <div class="language-overlay" id="languageOverlay">
@@ -30,9 +153,14 @@
             <span class="nav-link nav-link--trigger" data-i18n="nav.about">瑞维塔介绍</span>
             <div class="dropdown-menu">
               <a href="business-model.html" data-i18n="nav.about.businessModel">业务模式</a>
-              <a href="founder.html" data-i18n="nav.about.founder">创始人介绍</a>
-              <a href="patent.html" data-i18n="nav.about.patent">专利技术</a>
-              <a href="research-direction.html" data-i18n="nav.about.research">研发方向</a>
+              <a href="founder.html" data-i18n="nav.about.founder">核心团队</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link nav-link--trigger" data-i18n="nav.tech">技术平台</span>
+            <div class="dropdown-menu">
+              <a href="patent.html" data-i18n="nav.about.tech.patent">核心优势</a>
+              <a href="research-direction.html" data-i18n="nav.tech.research">研发方向</a>
             </div>
           </div>
           <a class="nav-link" href="research.html" data-i18n="nav.products">产品中心</a>
@@ -50,26 +178,62 @@
     <main>
       <section class="page-banner">
         <div class="container">
-          <p class="section-tag" data-i18n="hero.eyebrow">Patent Technology</p>
-          <h1 data-i18n="hero.title">专利技术与研发进展</h1>
-          <p data-i18n="hero.lead1"><span class="highlight">水凝胶敷料</span>通过高保湿与柔性支撑结构，帮助维持皮肤屏障、减少刺激并支持修复，在受损皮肤护理中具有显著优势。</p>
+          <p class="section-tag">CORE ADVANTAGES</p>
+          <h1>核心优势</h1>
+          <p>我们在生物材料领域的核心竞争力与技术壁垒。</p>
         </div>
       </section>
 
       <section class="page-content">
-        <div class="container patent-grid">
+        <div class="patent-grid">
           <article class="patent-card">
-            <h3 data-i18n="patent.card1.title">发明专利一：水凝胶敷料</h3>
-            <p class="patent-info" data-i18n="patent.card1.info">专利标题：水凝胶敷料及其制备方法与应用</p>
-            <p class="patent-meta" data-i18n="patent.card1.meta">专利号：CN202410000001 · 申请日期：2024-01-15 · 公开日期：2024-07-15 · 发明人：XX团队 · 实质审查状态：审查中</p>
-            <p data-i18n="patent.card1.text"><span class="highlight">水凝胶敷料</span>通过高保湿与柔性支撑结构，帮助维持皮肤屏障、减少刺激并支持修复。这类技术在皮肤屏障受损、敏感修护与术后护理场景中具有较强的应用潜力。</p>
+            <h3>发明专利一：水凝胶敷料</h3>
+            <p class="patent-info">专利标题：水凝胶敷料及其制备方法与应用</p>
+            <p class="patent-meta">专利号：CN202410000001 · 申请日期：2024-01-15 · 公开日期：2024-07-15 · 发明人：XX团队 · 实质审查状态：审查中</p>
+            <p><span class="highlight">水凝胶敷料</span>通过高保湿与柔性支撑结构，帮助维持皮肤屏障、减少刺激并支持修复。这类技术在皮肤屏障受损、敏感修护与术后护理场景中具有较强的应用潜力。</p>
           </article>
           <article class="patent-card">
-            <h3 data-i18n="patent.card2.title">发明专利二：微针递药系统</h3>
-            <p class="patent-info" data-i18n="patent.card2.info">专利标题：一种用于皮肤递送的微针阵列及其制备方法</p>
-            <p class="patent-meta" data-i18n="patent.card2.meta">专利号：CN202410000002 · 申请日期：2024-03-20 · 公开日期：2024-09-20 · 发明人：XX团队 · 实质审查状态：审查中</p>
-            <p data-i18n="patent.card2.text"><span class="highlight">微针递药系统</span>通过微小针道将活性成分精准递送至皮肤更深层，相比传统涂抹方式，可显著提升渗透效率与稳定性，增强护肤修护效果。</p>
+            <h3>发明专利二：微针递药系统</h3>
+            <p class="patent-info">专利标题：一种用于皮肤递送的微针阵列及其制备方法</p>
+            <p class="patent-meta">专利号：CN202410000002 · 申请日期：2024-03-20 · 公开日期：2024-09-20 · 发明人：XX团队 · 实质审查状态：审查中</p>
+            <p><span class="highlight">微针递药系统</span>通过微小针道将活性成分精准递送至皮肤更深层，相比传统涂抹方式，可显著提升渗透效率与稳定性，增强护肤修护效果。</p>
           </article>
+        </div>
+
+        <div class="advantages-section">
+          <div class="advantages-header">
+            <p class="section-tag">COMPETITIVE EDGE</p>
+            <h2>核心优势</h2>
+          </div>
+          
+          <div class="advantages-table-card">
+            <table class="advantages-table">
+              <thead>
+                <tr>
+                  <th>优势维度</th>
+                  <th>具体内容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>底层技术贯通</td>
+                  <td>同时掌握"递送系统开发+活性因子研发"双核心能力，形成技术闭环</td>
+                </tr>
+                <tr>
+                  <td>多场景覆盖</td>
+                  <td>单一技术平台可同时服务创面修复、上皮再生、护肤抗衰、疾病治疗四大场景</td>
+                </tr>
+                <tr>
+                  <td>路径清晰</td>
+                  <td>从消费级产品到严肃医疗，层层递进，兼顾短期现金流与长期壁垒</td>
+                </tr>
+                <tr>
+                  <td>动物数据扎实</td>
+                  <td>核心产品已完成动物实验验证，处于转化临界点</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>

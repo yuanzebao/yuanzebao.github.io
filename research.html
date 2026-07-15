@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -9,6 +9,105 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .page-banner {
+        background: #f2fbf4;
+      }
+      
+      .page-content {
+        background: #f7fef9;
+        padding: 4rem 0;
+      }
+      
+      .section-container {
+        max-width: 1000px;
+        margin: 0 auto 4rem;
+        padding: 0 2rem;
+      }
+      
+      .section-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      
+      .section-header .section-tag {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.85rem;
+        color: #1a5c3d;
+        font-weight: 700;
+        margin: 0 0 1rem;
+      }
+      
+      .section-header h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #1a5c3d;
+        margin: 0 0 1rem;
+      }
+      
+      .section-header p {
+        font-size: 1rem;
+        color: #555555;
+        margin: 0;
+        line-height: 1.7;
+      }
+      
+      .table-card {
+        background: #ffffff;
+        border-radius: 0;
+        box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
+        overflow: hidden;
+      }
+      
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      .data-table th {
+        background: #1a5c3d;
+        color: #ffffff;
+        padding: 1rem 1.25rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      
+      .data-table td {
+        padding: 1rem 1.25rem;
+        font-size: 0.9rem;
+        color: #222222;
+        border-bottom: 1px solid rgba(26, 92, 61, 0.08);
+      }
+      
+      .data-table tbody tr:nth-child(even) {
+        background: #f2fbf4;
+      }
+      
+      .data-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+      
+      .return-home {
+        display: block;
+        margin: 4rem auto 0;
+        width: fit-content;
+        padding: 0.875rem 2rem;
+        background: #1a5c3d;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(26, 92, 61, 0.25);
+      }
+      
+      .return-home:hover {
+        background: #154d30;
+        box-shadow: 0 6px 20px rgba(26, 92, 61, 0.35);
+      }
+    </style>
   </head>
   <body data-page="research">
     <div class="language-overlay" id="languageOverlay">
@@ -30,9 +129,14 @@
             <span class="nav-link nav-link--trigger" data-i18n="nav.about">瑞维塔介绍</span>
             <div class="dropdown-menu">
               <a href="business-model.html" data-i18n="nav.about.businessModel">业务模式</a>
-              <a href="founder.html" data-i18n="nav.about.founder">创始人介绍</a>
-              <a href="patent.html" data-i18n="nav.about.patent">专利技术</a>
-              <a href="research-direction.html" data-i18n="nav.about.research">研发方向</a>
+              <a href="founder.html" data-i18n="nav.about.founder">核心团队</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link nav-link--trigger" data-i18n="nav.tech">技术平台</span>
+            <div class="dropdown-menu">
+              <a href="patent.html" data-i18n="nav.about.tech.patent">专利技术</a>
+              <a href="research-direction.html" data-i18n="nav.about.tech.research">研发方向</a>
             </div>
           </div>
           <a class="nav-link" href="research.html" data-i18n="nav.products">产品中心</a>
@@ -50,28 +154,100 @@
     <main>
       <section class="page-banner">
         <div class="container">
-          <p class="section-tag" data-i18n="hero.eyebrow">Product Center</p>
-          <h1 data-i18n="hero.title">皮肤修护与抗衰产品展示平台</h1>
-          <p data-i18n="hero.lead1">基于<span class="highlight">水凝胶</span>与<span class="highlight">微针</span>核心技术平台，我们开发了一系列针对不同皮肤问题的创新解决方案。</p>
+          <p class="section-tag">PRODUCT CENTER</p>
+          <h1>产品中心</h1>
+          <p>基于水凝胶与微针核心技术平台，开发针对不同皮肤问题的创新解决方案。</p>
         </div>
       </section>
 
       <section class="page-content">
-        <div class="container research-grid">
-          <article class="research-card">
-            <h3 data-i18n="content.section1.title">水凝胶敷料系列</h3>
-            <p data-i18n="content.section1.text">高保湿、柔性支撑的<span class="highlight">水凝胶敷料</span>，适用于屏障受损、敏感修护与术后护理场景。</p>
-          </article>
-          <article class="research-card">
-            <h3 data-i18n="content.section2.title">微针递药产品</h3>
-            <p data-i18n="content.section2.text"><span class="highlight">微针递药系统</span>通过微小针道将活性成分精准递送至皮肤深层，提升渗透效率与修护效果。</p>
-          </article>
-          <article class="research-card">
-            <h3 data-i18n="content.section3.title">抗衰活性成分</h3>
-            <p data-i18n="content.section3.text">基于<span class="highlight">细胞抗衰</span>与<span class="highlight">胶原再生</span>研究，开发的高效活性成分组合。</p>
-          </article>
+        <!-- 板块一：产品管线 -->
+        <div class="section-container">
+          <div class="section-header">
+            <p class="section-tag">PRODUCT PIPELINE</p>
+            <h2>产品管线</h2>
+            <p>依托四大自研生物材料技术平台，搭建分层完整产品管线，覆盖临床创面、黏膜再生、皮肤抗衰、衰老疾病干预多赛道。</p>
+          </div>
+          
+          <div class="table-card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>产品线</th>
+                  <th>核心适应症/应用场景</th>
+                  <th>研发状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>促修复水凝胶</td>
+                  <td>各类急慢性创面修复、术后创面愈合、皮肤屏障重建</td>
+                  <td>已完成动物实验，产业化转化中</td>
+                </tr>
+                <tr>
+                  <td>生物膜</td>
+                  <td>创面覆盖与感染防护、上皮化引导、黏膜修复</td>
+                  <td>已完成动物实验，产业化转化中</td>
+                </tr>
+                <tr>
+                  <td>微针贴片</td>
+                  <td>创面局部靶向递药、上皮再生修复、护肤抗衰</td>
+                  <td>已完成动物实验，产业化转化中</td>
+                </tr>
+                <tr>
+                  <td>抗衰因子</td>
+                  <td>核心活性物（用于整合入上述产品及衰老疾病治疗）</td>
+                  <td>实验室阶段，分子作用机制研究全部完成</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <a class="return-home" href="index.html" data-i18n="return.home">返回首页</a>
+
+        <!-- 板块二：应用场景全景图 -->
+        <div class="section-container">
+          <div class="section-header">
+            <p class="section-tag">APPLICATION SCENARIOS</p>
+            <h2>应用场景全景图</h2>
+            <p>基于全线产品能力，覆盖从临床创面、黏膜再生到日常护肤、远期衰老疾病干预的全层次应用场景。</p>
+          </div>
+          
+          <div class="table-card">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>应用层次</th>
+                  <th>具体场景</th>
+                  <th>对应产品</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>体表创面修复</td>
+                  <td>手术切口、烧烫伤、压力性损伤、糖尿病足溃疡、皮肤撕脱伤</td>
+                  <td>促修复水凝胶、生物膜、微针贴片</td>
+                </tr>
+                <tr>
+                  <td>上皮组织再生</td>
+                  <td>皮肤表皮再生、口腔黏膜修复、阴道黏膜修复、角膜上皮修复</td>
+                  <td>生物膜、微针贴片</td>
+                </tr>
+                <tr>
+                  <td>护肤与抗衰</td>
+                  <td>皮肤年轻化、皮肤屏障修复、活性成分精准导入</td>
+                  <td>微针贴片、护肤品专用促修复水凝胶</td>
+                </tr>
+                <tr>
+                  <td>衰老疾病干预（远期研发方向）</td>
+                  <td>卵巢早衰、肌肉减少症等衰老相关退行性疾病</td>
+                  <td>抗衰因子搭配配套递送系统组合方案</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <a class="return-home" href="index.html">返回首页</a>
       </section>
     </main>
 

@@ -3,12 +3,165 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="title">Revita Biotec | 创始人介绍</title>
-    <meta name="description" content="了解创始人的科研背景与创业愿景。" data-i18n="description" />
+    <title data-i18n="title">Revita Biotec | 核心团队</title>
+    <meta name="description" content="了解瑞维塔生物的核心团队成员。" data-i18n="description" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .page-banner {
+        background: #f2fbf4;
+      }
+      
+      .page-content {
+        background: #f7fef9;
+        padding: 4rem 0;
+      }
+      
+      .team-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      
+      .team-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .team-header .section-tag {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.85rem;
+        color: #ffffff;
+        font-weight: 700;
+        margin: 0 0 1rem;
+      }
+      
+      .team-header h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+      }
+      
+      .team-mission {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin: 1.5rem 0 0;
+        line-height: 1.7;
+      }
+      
+      .team-wrapper {
+        background: #1a5c3d;
+        border-radius: 20px;
+        padding: 3rem 2rem;
+        box-shadow: 0 12px 40px rgba(26, 92, 61, 0.2);
+      }
+      
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+      }
+      
+      .team-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2.5rem 1.75rem;
+        text-align: center;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      }
+      
+      .team-avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: #f2fbf4;
+        margin: 0 auto 1.5rem;
+        border: 3px solid #1a5c3d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: #1a5c3d;
+      }
+      
+      .team-avatar img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      
+      .team-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1a5c3d;
+        margin: 0 0 0.5rem;
+      }
+      
+      .team-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1a5c3d;
+        margin: 0 0 1rem;
+      }
+      
+      .team-education {
+        font-size: 0.8rem;
+        color: #555555;
+        margin: 0 0 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(26, 92, 61, 0.1);
+      }
+      
+      .team-bio {
+        font-size: 0.8rem;
+        color: #333333;
+        line-height: 1.6;
+        margin: 0;
+        text-align: left;
+      }
+      
+      .return-home {
+        display: block;
+        margin: 4rem auto 0;
+        width: fit-content;
+        padding: 0.875rem 2rem;
+        background: #1a5c3d;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(26, 92, 61, 0.25);
+      }
+      
+      .return-home:hover {
+        background: #154d30;
+        box-shadow: 0 6px 20px rgba(26, 92, 61, 0.35);
+      }
+      
+      @media (max-width: 900px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media (max-width: 600px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body data-page="founder">
     <div class="language-overlay" id="languageOverlay">
@@ -30,9 +183,14 @@
             <span class="nav-link nav-link--trigger" data-i18n="nav.about">瑞维塔介绍</span>
             <div class="dropdown-menu">
               <a href="business-model.html" data-i18n="nav.about.businessModel">业务模式</a>
-              <a href="founder.html" data-i18n="nav.about.founder">创始人介绍</a>
-              <a href="patent.html" data-i18n="nav.about.patent">专利技术</a>
-              <a href="research-direction.html" data-i18n="nav.about.research">研发方向</a>
+              <a href="founder.html" data-i18n="nav.about.founder">核心团队</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <span class="nav-link nav-link--trigger" data-i18n="nav.tech">技术平台</span>
+            <div class="dropdown-menu">
+              <a href="patent.html" data-i18n="nav.about.tech.patent">专利技术</a>
+              <a href="research-direction.html" data-i18n="nav.about.tech.research">研发方向</a>
             </div>
           </div>
           <a class="nav-link" href="research.html" data-i18n="nav.products">产品中心</a>
@@ -50,24 +208,56 @@
     <main>
       <section class="page-banner">
         <div class="container">
-          <p class="section-tag" data-i18n="hero.eyebrow">Founder</p>
-          <h1 data-i18n="hero.title">人物履历与企业愿景</h1>
-          <p data-i18n="hero.lead1">创始人团队拥有深厚的<span class="highlight">生物医学</span>与<span class="highlight">皮肤科学</span>背景，致力于将前沿科研成果转化为实际应用。</p>
+          <p class="section-tag">FOUNDER</p>
+          <h1>瑞维塔开创者</h1>
+          <p>核心团队</p>
         </div>
       </section>
 
       <section class="page-content">
-        <div class="container content-grid">
-          <div class="content-block">
-            <h2 data-i18n="content.section1.title">科研背景</h2>
-            <p data-i18n="content.section1.text">创始人团队在细胞生物学、皮肤科学与生物材料领域拥有丰富的科研经验和学术积累。</p>
+        <div class="team-section">
+          <div class="team-wrapper">
+            <div class="team-header">
+              <p class="section-tag">FOUNDER</p>
+              <h2>创始人介绍</h2>
+              <p class="team-mission">创业初心<br />致力于将实验室的前沿发现转化为能够真正改善人们皮肤健康的创新产品与解决方案</p>
+            </div>
+            
+            <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar">
+                <span>👤</span>
+              </div>
+              <h3 class="team-name">XXX</h3>
+              <p class="team-title">创始人&总经理</p>
+              <p class="team-education">XX大学高分子材料硕士</p>
+              <p class="team-bio">深耕医用生物材料、医美透皮制剂行业8年，聚焦微针、水凝胶、静电纺丝生物膜产业化落地；曾主导多款械字号修复敷料、活性原料产品研发申报，拥有完整0-1医疗器械产品管线搭建经验；熟悉产学研转化全流程，牵头搭建公司自有再生医学研发平台，统筹技术研发、项目落地与市场合作。</p>
+            </div>
+            
+            <div class="team-card">
+              <div class="team-avatar">
+                <span>👤</span>
+              </div>
+              <h3 class="team-name">XXX</h3>
+              <p class="team-title">市场中心副总经理</p>
+              <p class="team-education">XX大学药学硕士</p>
+              <p class="team-bio">多年头部药企、医美原料企业品牌运营经历，熟悉B端原料定制、院线医美渠道、医疗器械ODM合作模式；擅长品牌体系搭建、客户渠道开发与产品商业化落地，具备成熟的新品上市、品牌宣传、客户维护全链路管理经验。</p>
+            </div>
+            
+            <div class="team-card">
+              <div class="team-avatar">
+                <span>👤</span>
+              </div>
+              <h3 class="team-name">朱艳霞</h3>
+              <p class="team-title">首席科学顾问 | 深圳大学医学部副教授、硕导</p>
+              <p class="team-education">大连理工大学博士，英国牛津大学联合培养；美国宾夕法尼亚大学博士后</p>
+              <p class="team-bio">长期专注干细胞生物学、皮肤/软组织再生修复生物材料研究，深耕响应型水凝胶、可溶性微针透皮递送、静电纺丝仿生支架三大核心技术；主持国家、省市级多项再生医学科研基金，在Biomaterials、Acta Biomaterialia等国际顶刊发表SCI论文30余篇，累计引用超1000次；持有多项皮肤修复生物材料发明专利，成果完成产学研落地转化，指导硕博研究生开展医美抗衰、慢性创面修复相关课题研究。</p>
+            </div>
+            </div>
           </div>
-          <div class="content-block">
-            <h2 data-i18n="content.section2.title">创业初心</h2>
-            <p data-i18n="content.section2.text">致力于将实验室的前沿发现转化为能够真正改善人们皮肤健康的创新产品与解决方案。</p>
-          </div>
+          
+          <a class="return-home" href="index.html">返回首页</a>
         </div>
-        <a class="return-home" href="index.html" data-i18n="return.home">返回首页</a>
       </section>
     </main>
 
