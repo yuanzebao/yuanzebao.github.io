@@ -49,7 +49,14 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
+  gap: 2rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .brand {
@@ -61,10 +68,50 @@ img {
   font-size: 1.1rem;
 }
 
+.brand-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-btn {
+  background: #1a5c3d;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-btn:hover {
+  background: #154d30;
+  box-shadow: 0 4px 12px rgba(26, 92, 61, 0.3);
 }
 
 .nav-item {
