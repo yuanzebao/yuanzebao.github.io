@@ -3,107 +3,347 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="title">Revita Biotec | 研发方向</title>
-    <meta name="description" content="了解我们的科研路径与技术转化方向。" data-i18n="description" />
+    <title data-i18n="title">Revita Biotec | 技术平台</title>
+    <meta name="description" content="了解我们的研产一体化技术体系与核心技术平台。" data-i18n="description" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .strategy-section {
+      .page-banner {
+        background: #f2fbf4;
+      }
+
+      .page-content {
+        background: #f7fef9;
+        padding: 4rem 0;
+      }
+
+      .tech-section {
         max-width: 1200px;
-        margin: 4rem auto 0;
+        margin: 0 auto;
         padding: 0 2rem;
       }
-      
-      .strategy-header {
+
+      .tech-main-title {
         text-align: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 4rem;
       }
-      
-      .strategy-header .section-tag {
+
+      .tech-main-title .section-tag {
         text-transform: uppercase;
         letter-spacing: 0.2em;
         font-size: 0.85rem;
         color: #1a5c3d;
         font-weight: 700;
         margin: 0 0 1rem;
+        display: block;
       }
-      
-      .strategy-header h2 {
+
+      .tech-main-title h1 {
         font-size: 1.8rem;
         font-weight: 700;
         color: #1a5c3d;
         margin: 0;
       }
-      
-      .strategy-cards {
+
+      .section-wrapper {
+        margin-bottom: 4rem;
+      }
+
+      .section-header {
+        margin-bottom: 2.5rem;
+      }
+
+      .section-header h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #1a5c3d;
+        margin: 0 0 0.75rem;
+      }
+
+      .section-header p {
+        font-size: 1rem;
+        color: #222222;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .cards-section {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
+      }
+
+      .cards-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
       }
-      
-      .strategy-card {
-        background: #ffffff;
-        border-radius: 12px;
-        padding: 2rem;
+
+      .card-item {
+        background: #f2fbf4;
+        border-radius: 8px;
+        padding: 1.5rem;
         box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
         display: flex;
         flex-direction: column;
       }
-      
-      .strategy-number {
-        font-size: 3rem;
-        font-weight: 800;
-        color: #1a5c3d;
-        opacity: 0.15;
-        margin-bottom: -1.5rem;
-        line-height: 1;
+
+      .card-image {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 15px rgba(26, 92, 61, 0.1);
       }
-      
-      .strategy-content {
+
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-text {
         flex: 1;
       }
-      
-      .strategy-content h3 {
+
+      .card-text h3 {
         font-size: 1.1rem;
         font-weight: 600;
         color: #1a5c3d;
         margin: 0 0 1rem;
       }
-      
-      .strategy-content p {
+
+      .card-text p {
+        font-size: 0.85rem;
+        color: #222222;
+        line-height: 1.6;
+        margin: 0 0 1rem;
+      }
+
+      .card-text ul {
+        margin: 0;
+        padding-left: 1.5rem;
+      }
+
+      .card-text li {
+        font-size: 0.85rem;
+        color: #222222;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-text li:last-child {
+        margin-bottom: 0;
+      }
+
+      .patent-section {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
+      }
+
+      .patent-list {
+        margin: 0;
+        padding-left: 0;
+      }
+
+      .patent-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid #e8f5ec;
+        position: relative;
+      }
+
+      .patent-item:last-child {
+        border-bottom: none;
+      }
+
+      .patent-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background: #f2fbf4;
+        border-radius: 50%;
+        color: #1a5c3d;
+        font-weight: 600;
+        font-size: 0.85rem;
+        margin-right: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .patent-content {
+        flex: 1;
+      }
+
+      .patent-content h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a5c3d;
+        margin: 0 0 0.5rem;
+      }
+
+      .patent-content p {
         font-size: 0.9rem;
         color: #222222;
-        line-height: 1.7;
+        line-height: 1.6;
         margin: 0;
       }
-      
-      @media (max-width: 900px) {
-        .strategy-cards {
-          grid-template-columns: repeat(2, 1fr);
-        }
+
+      .advantage-section {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
+      }
+
+      .advantage-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .advantage-card {
+        background: #f7fef9;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .advantage-card:hover {
+        transform: translateY(-3px);
+      }
+
+      .advantage-card h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a5c3d;
+        margin: 0 0 0.75rem;
       }
       
-      @media (max-width: 600px) {
-        .strategy-cards {
+      .advantage-card p {
+        font-size: 0.85rem;
+        color: #222222;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .phase-section {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 30px rgba(26, 92, 61, 0.08);
+      }
+
+      .phase-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .phase-card {
+        background: #f7fef9;
+        border-radius: 8px;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .phase-number {
+        position: absolute;
+        top: -12px;
+        left: 2rem;
+        background: #1a5c3d;
+        color: #ffffff;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .phase-card h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a5c3d;
+        margin: 0 0 1rem;
+      }
+
+      .phase-card p {
+        font-size: 0.9rem;
+        color: #222222;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      @media (max-width: 900px) {
+        .phase-grid {
           grid-template-columns: 1fr;
+        }
+      }
+
+      .return-home {
+        display: inline-block;
+        margin-top: 2.5rem;
+        padding: 0.875rem 2rem;
+        background: #1a5c3d;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(26, 92, 61, 0.25);
+      }
+
+      .return-home:hover {
+        background: #154d30;
+        box-shadow: 0 6px 20px rgba(26, 92, 61, 0.35);
+      }
+
+      @media (max-width: 900px) {
+        .cards-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .advantage-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .tech-main-title h1 {
+          font-size: 1.4rem;
+        }
+
+        .section-header h2 {
+          font-size: 1.2rem;
+        }
+
+        .carousel-section,
+        .patent-section,
+        .advantage-section {
+          padding: 1.5rem;
         }
       }
     </style>
   </head>
   <body data-page="researchDirection">
-    <div class="language-overlay" id="languageOverlay">
-      <div class="language-modal">
-        <div class="language-brand">Revita Biotec</div>
-        <h2 class="language-title">请选择您的语言 / Please select your language</h2>
-        <div class="language-buttons">
-          <button class="lang-select-btn lang-zh">中文</button>
-          <button class="lang-select-btn lang-en">English</button>
-        </div>
-      </div>
-    </div>
-
     <header class="site-header">
       <div class="container nav-bar">
         <div class="nav-left">
@@ -121,25 +361,10 @@
                 <a href="founder.html" data-i18n="nav.about.founder">核心团队</a>
               </div>
             </div>
-            <div class="nav-item">
-              <span class="nav-link nav-link--trigger" data-i18n="nav.tech">技术平台</span>
-              <div class="dropdown-menu">
-                <a href="patent.html" data-i18n="nav.about.tech.patent">核心优势</a>
-                <a href="research-direction.html" data-i18n="nav.tech.research">研发方向</a>
-              </div>
-            </div>
+            <a class="nav-link" href="research-direction.html" data-i18n="nav.tech">技术平台</a>
             <a class="nav-link" href="research.html" data-i18n="nav.products">产品中心</a>
-            <a class="nav-link" href="latest.html" data-i18n="nav.news">最新动态</a>
-            <a class="nav-link" href="faq.html" data-i18n="nav.faq">常见问题</a>
+            <a class="nav-link" href="latest.html" data-i18n="nav.news">联系我们</a>
           </nav>
-        </div>
-        
-        <div class="nav-right">
-          <div class="lang-switcher">
-            <button class="lang-btn" data-lang="zh">中文</button>
-            <button class="lang-btn" data-lang="en">EN</button>
-          </div>
-          <a href="contact.html" class="contact-btn" data-i18n="nav.contact">联系我们</a>
         </div>
       </div>
     </header>
@@ -147,130 +372,160 @@
     <main>
       <section class="page-banner">
         <div class="container">
-          <p class="section-tag" data-i18n="hero.eyebrow">Research Direction</p>
-          <h1 data-i18n="hero.title">面向抗衰与皮肤修复的科研路径</h1>
-          <p data-i18n="hero.lead1">我们构建实验平台和数据流程，持续探索<span class="highlight">衰老机制</span>、<span class="highlight">胶原再生</span>和皮肤屏障修复的核心生物学基础。</p>
+          <p class="section-tag">TECHNOLOGY PLATFORM</p>
+          <h1>核心技术平台</h1>
+          <p>搭建研产深度融合体系，实现技术研发到产业落地的全链条高效转化</p>
         </div>
       </section>
 
       <section class="page-content">
-        <div class="container">
-          <div class="carousel-section">
-            <h2 class="carousel-title" data-i18n="content.section1.title">核心技术平台</h2>
-            
-            <div class="carousel-container">
-              <button class="carousel-arrow carousel-prev" id="carouselPrev">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              
-              <div class="carousel-track-wrapper">
-                <div class="carousel-track" id="carouselTrack">
-                  <div class="carousel-item" data-index="0">
-                    <div class="carousel-image">
-                      <img src="images/snj.png" alt="促修复水凝胶平台" />
-                    </div>
-                    <div class="carousel-text">
-                      <h3>促修复水凝胶平台</h3>
-                      <p>基于天然多糖材料设计的功能性水凝胶，具备三维多孔网络结构、优异的生物相容性和可控降解特性。该平台能够：</p>
-                      <ul>
-                        <li>为创面提供湿性愈合环境，促进肉芽组织生长</li>
-                        <li>负载活性因子实现缓释递送，持续调控修复微环境</li>
-                        <li>适用于各类急慢性创面（手术切口、烧烫伤、压力性损伤、糖尿病足溃疡等）</li>
-                      </ul>
-                    </div>
+        <div class="tech-section">
+          <div class="tech-main-title">
+            <p class="section-tag">CORE TECHNOLOGY</p>
+            <h1>研产一体化核心技术平台</h1>
+          </div>
+
+          <div class="section-wrapper">
+            <div class="section-header">
+            <h2>研发管线·生物活性递送与修复基质平台</h2>
+            <p>依托一体化生物材料基质研发体系，搭建可长期拓展的皮肤修复活性递送载体管线，当前落地促修复水凝胶、屏障生物膜、靶向微针贴片三类成熟分支载体，可灵活迭代适配各类创面修复、皮肤抗衰场景的全新生物材料产品。</p>
+          </div>
+          
+          <div class="cards-section">
+              <div class="cards-grid">
+                <div class="card-item">
+                  <div class="card-image">
+                    <img src="images/snj.png" alt="促修复水凝胶基质" />
                   </div>
-                  
-                  <div class="carousel-item" data-index="1">
-                    <div class="carousel-image">
-                      <img src="images/swm.png" alt="生物膜平台" />
-                    </div>
-                    <div class="carousel-text">
-                      <h3>生物膜平台</h3>
-                      <p>开发的系列功能性生物膜产品，可作为物理屏障覆盖创面，防止外源感染，同时通过调控细胞外基质微环境，引导上皮细胞定向迁移与增殖，加速上皮化进程。适用于：</p>
-                      <ul>
-                        <li>术后创面保护与修复</li>
-                        <li>皮肤缺损与溃疡修复</li>
-                        <li>黏膜上皮再生（口腔、阴道等）</li>
-                      </ul>
-                    </div>
+                  <div class="card-text">
+                    <h3>分支载体：促修复水凝胶基质</h3>
+                    <p>基于天然多糖材料设计的功能性水凝胶，具备三维多孔网络结构、优异的生物相容性和可控降解特性。该平台能够：</p>
+                    <ul>
+                      <li>为创面提供湿性愈合环境，促进肉芽组织生长</li>
+                      <li>负载活性因子实现缓释递送，持续调控修复微环境</li>
+                      <li>适用于各类急慢性创面（手术切口、烧烫伤、压力性损伤、糖尿病足溃疡等）</li>
+                    </ul>
                   </div>
-                  
-                  <div class="carousel-item" data-index="2">
-                    <div class="carousel-image">
-                      <img src="images/wz.jpg" alt="微针递送系统平台" />
-                    </div>
-                    <div class="carousel-text">
-                      <h3>微针递送系统平台</h3>
-                      <p>基于多糖材料的可溶性微针贴片，能够高效突破上皮屏障，将活性成分精准递送至目标组织层位。该平台兼具微创、无痛、自主操作等优势，适用于：</p>
-                      <ul>
-                        <li>创面局部活性物靶向递送</li>
-                        <li>上皮层再生修复</li>
-                        <li>皮肤年轻化与抗衰干预</li>
-                      </ul>
-                    </div>
+                </div>
+                
+                <div class="card-item">
+                  <div class="card-image">
+                    <img src="images/swm.png" alt="屏障防护生物膜基质" />
                   </div>
-                  
-                  <div class="carousel-item" data-index="3">
-                    <div class="carousel-image">
-                      <img src="images/ksyz.jpg" alt="抗衰因子研发平台" />
-                    </div>
-                    <div class="carousel-text">
-                      <h3>抗衰因子研发平台</h3>
-                      <p>公司正系统开展抗衰活性因子的筛选、改造与机制研究。该平台成果未来将整合入三大递送系统，实现从"结构性修复"向"生物学再生"的升级。长期将拓展至衰老相关疾病（如卵巢早衰等）治疗领域。</p>
-                    </div>
+                  <div class="card-text">
+                    <h3>分支载体：屏障防护生物膜基质</h3>
+                    <p>开发的系列功能性生物膜产品，可作为物理屏障覆盖创面，防止外源感染，同时通过调控细胞外基质微环境，引导上皮细胞定向迁移与增殖，加速上皮化进程。适用于：</p>
+                    <ul>
+                      <li>术后创面保护与修复</li>
+                      <li>皮肤缺损与溃疡修复</li>
+                      <li>黏膜上皮再生（口腔、阴道等）</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="card-item">
+                  <div class="card-image">
+                    <img src="images/wz.jpg" alt="靶向递送微针贴片" />
+                  </div>
+                  <div class="card-text">
+                    <h3>分支载体：靶向递送微针贴片</h3>
+                    <p>基于多糖材料的可溶性微针贴片，能够高效突破上皮屏障，将活性成分精准递送至目标组织层位。该平台兼具微创、无痛、自主操作等优势，适用于：</p>
+                    <ul>
+                      <li>创面局部活性物靶向递送</li>
+                      <li>上皮层再生修复</li>
+                      <li>皮肤年轻化与抗衰干预</li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              
-              <button class="carousel-arrow carousel-next" id="carouselNext">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+            </div>
+          </div>
+
+          <div class="section-wrapper">
+            <div class="section-header">
+              <h2>自主核心发明专利</h2>
+              <p>掌握核心制备工艺专利，直接证明我们掌握生产制造工艺，不是单纯研发理论，体现"研发制作一体"能力。</p>
             </div>
             
-            <div class="carousel-indicators" id="carouselIndicators">
-              <span class="indicator active" data-index="0"></span>
-              <span class="indicator" data-index="1"></span>
-              <span class="indicator" data-index="2"></span>
-              <span class="indicator" data-index="3"></span>
+            <div class="patent-section">
+              <ul class="patent-list">
+                <li class="patent-item">
+                  <span class="patent-number">1</span>
+                  <div class="patent-content">
+                    <h4>水凝胶敷料及其制备方法与应用</h4>
+                    <p>专利号：CN202410000001 | 申请日期：2024-01-15 | 公开日期：2024-07-15 | 实质审查状态：审查中</p>
+                  </div>
+                </li>
+                <li class="patent-item">
+                  <span class="patent-number">2</span>
+                  <div class="patent-content">
+                    <h4>一种用于皮肤递送的微针阵列及其制备方法</h4>
+                    <p>专利号：CN202410000002 | 申请日期：2024-03-20 | 公开日期：2024-09-20 | 实质审查状态：审查中</p>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div class="section-wrapper">
+            <div class="section-header">
+              <h2>综合核心竞争优势</h2>
+              <p>对整套技术平台做总结拔高，避免页面只堆砌平台，缺少价值总结，构建可持续的差异化竞争壁垒。</p>
+            </div>
+            
+            <div class="advantage-section">
+              <div class="advantage-grid">
+                <div class="advantage-card">
+                  <h4>底层技术贯通</h4>
+                  <p>同时掌握"递送系统开发+活性因子研发"双核心能力，形成技术闭环</p>
+                </div>
+                <div class="advantage-card">
+                  <h4>多场景覆盖</h4>
+                  <p>单一技术平台可同时服务创面修复、上皮再生、护肤抗衰、疾病治疗四大场景</p>
+                </div>
+                <div class="advantage-card">
+                  <h4>路径清晰</h4>
+                  <p>从消费级产品到严肃医疗，层层递进，兼顾短期现金流与长期壁垒</p>
+                </div>
+                <div class="advantage-card">
+                  <h4>动物数据扎实</h4>
+                  <p>核心产品已完成动物实验验证，处于转化临界点</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-wrapper">
+            <div class="section-header">
+              <h2>转化路径规划</h2>
+              <p>分阶段推进技术产业化落地，构建可持续发展路径。</p>
+            </div>
+            
+            <div class="phase-section">
+              <div class="phase-grid">
+                <div class="phase-card">
+                  <span class="phase-number">01</span>
+                  <h4>第一阶段（近期）</h4>
+                  <p>聚焦创面修复与上皮再生领域，推动水凝胶、生物膜和微针产品在医疗美容、创面护理、术后修复等场景的产业化落地，建立临床验证基础与市场口碑。</p>
+                </div>
+                <div class="phase-card">
+                  <span class="phase-number">02</span>
+                  <h4>第二阶段（中期）</h4>
+                  <p>将抗衰因子深度整合入三大递送系统，形成"材料+活性"协同增效的产品矩阵，实现从物理覆盖到生物学主动修复的升级。</p>
+                </div>
+                <div class="phase-card">
+                  <span class="phase-number">03</span>
+                  <h4>第三阶段（远期）</h4>
+                  <p>将核心技术拓展至衰老相关疾病治疗领域，以卵巢早衰为切入点，为系统性衰老干预提供创新解决方案。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <a class="return-home" href="index.html" data-i18n="return.home">返回首页</a>
           </div>
         </div>
-
-        <div class="strategy-section">
-          <div class="strategy-header">
-            <p class="section-tag">STRATEGIC PATH</p>
-            <h2>战略路径</h2>
-          </div>
-          <div class="strategy-cards">
-            <div class="strategy-card">
-              <div class="strategy-number">01</div>
-              <div class="strategy-content">
-                <h3>第一阶段（近期）</h3>
-                <p>聚焦创面修复与上皮再生领域，推动水凝胶、生物膜和微针产品在医疗美容、创面护理、术后修复等场景的产业化落地，建立临床验证基础与市场口碑。</p>
-              </div>
-            </div>
-            <div class="strategy-card">
-              <div class="strategy-number">02</div>
-              <div class="strategy-content">
-                <h3>第二阶段（中期）</h3>
-                <p>将抗衰因子深度整合入三大递送系统，形成“材料+活性”协同增效的产品矩阵，实现从物理覆盖到生物学主动修复的升级。</p>
-              </div>
-            </div>
-            <div class="strategy-card">
-              <div class="strategy-number">03</div>
-              <div class="strategy-content">
-                <h3>第三阶段（远期）</h3>
-                <p>将核心技术拓展至衰老相关疾病治疗领域，以卵巢早衰为切入点，为系统性衰老干预提供创新解决方案。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <a class="return-home" href="index.html" data-i18n="return.home">返回首页</a>
       </section>
     </main>
 
@@ -291,5 +546,8 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+
+    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -18,17 +18,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-page="home">
-    <div class="language-overlay" id="languageOverlay">
-      <div class="language-modal">
-        <div class="language-brand">Revita Biotec</div>
-        <h2 class="language-title">请选择您的语言 / Please select your language</h2>
-        <div class="language-buttons">
-          <button class="lang-select-btn lang-zh">中文</button>
-          <button class="lang-select-btn lang-en">English</button>
-        </div>
-      </div>
-    </div>
-
     <header class="site-header">
       <div class="container nav-bar">
         <div class="nav-left">
@@ -46,25 +35,10 @@
                 <a href="founder.html" data-i18n="nav.about.founder">核心团队</a>
               </div>
             </div>
-            <div class="nav-item">
-              <span class="nav-link nav-link--trigger" data-i18n="nav.tech">技术平台</span>
-              <div class="dropdown-menu">
-                <a href="patent.html" data-i18n="nav.about.tech.patent">核心优势</a>
-                <a href="research-direction.html" data-i18n="nav.tech.research">研发方向</a>
-              </div>
-            </div>
+            <a class="nav-link" href="research-direction.html" data-i18n="nav.tech">技术平台</a>
             <a class="nav-link" href="research.html" data-i18n="nav.products">产品中心</a>
-            <a class="nav-link" href="latest.html" data-i18n="nav.news">最新动态</a>
-            <a class="nav-link" href="faq.html" data-i18n="nav.faq">常见问题</a>
+            <a class="nav-link" href="latest.html" data-i18n="nav.news">联系我们</a>
           </nav>
-        </div>
-        
-        <div class="nav-right">
-          <div class="lang-switcher">
-            <button class="lang-btn" data-lang="zh">中文</button>
-            <button class="lang-btn" data-lang="en">EN</button>
-          </div>
-          <a href="contact.html" class="contact-btn" data-i18n="nav.contact">联系我们</a>
         </div>
       </div>
     </header>
@@ -90,7 +64,7 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="about.html" data-i18n="hero.cta1">了解公司</a>
               <a class="btn btn-secondary" href="research.html" data-i18n="hero.cta2">探索研发</a>
-              <a class="btn btn-secondary" href="contact.html" data-i18n="hero.cta3">立即联系</a>
+              <a class="btn btn-secondary" href="latest.html" data-i18n="hero.cta3">立即联系</a>
             </div>
           </div>
         </div>
@@ -99,10 +73,20 @@
       <section class="mission-section">
         <div class="container mission-content">
           <div class="mission-text">
-            <h2 data-i18n="mission.title">我们的使命</h2>
-            <div data-i18n="mission.content">
-              <p>Revita Biotec 以"科技重塑组织新生"为使命，聚焦创面修复、上皮再生与抗衰老领域的未满足临床需求。公司核心团队在抗衰老、再生医学与皮肤科学领域拥有多年积累，已成功完成多款产品的实验室研发及动物实验验证，正全力推进产业化转化。</p>
-              <p>公司坚持"递送系统+活性因子"的技术闭环战略——以生物水凝胶、活性生物膜和可溶性微针为载体，以自研抗衰因子为核心活性物，逐步实现从"物理修复"到"主动再生"的跨越。</p>
+            <h2>以生命之名，重塑新生</h2>
+            <p>Revita 源自拉丁词根 Re（重塑、回归）与 Vita（生命），寓意重焕机体原生生机。我们始终坚持以生物科技激活人体自身修复潜能，而非简单外源填充，以此搭建完整的再生解决方案体系。</p>
+            <p>公司打造组织再生生物材料创新平台，构建研产一体化转化链路，可针对不同组织修复需求定制多元生物载体方案。目前已落地柔性凝胶、仿生纳米薄膜、微创递送载体多条技术管线，覆盖创面愈合、皮肤再生、机体衰老干预等多元应用场景。</p>
+            <p>我们的研究从体表创面修复起步，逐步延伸至皮肤抗衰、深层组织衰老干预领域。依托平台灵活的材料开发能力，持续拓展适配人体不同修复需求的生物医用载体，以温和、仿生的材料体系，助力组织恢复健康原生状态。</p>
+            
+            <div class="mission-vision">
+              <div class="mission-box">
+                <h3>使命</h3>
+                <p>以创新生物材料技术加速组织修复、延缓机体衰老，让受损组织重焕原生活力。</p>
+              </div>
+              <div class="vision-box">
+                <h3>愿景</h3>
+                <p>成为再生医学领域值得信赖的生物材料创新企业。</p>
+              </div>
             </div>
           </div>
         </div>
@@ -132,7 +116,7 @@
           <article class="card">
             <h3 data-i18n="card.contact.title">联系我们</h3>
             <p data-i18n="card.contact.text">获取合作咨询，了解更多合作机会。</p>
-            <a class="link-button" href="contact.html" data-i18n="card.link">前往</a>
+            <a class="link-button" href="latest.html" data-i18n="card.link">前往</a>
           </article>
         </div>
       </section>
